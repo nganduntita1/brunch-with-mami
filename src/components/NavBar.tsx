@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const NavBar = () => {
@@ -18,39 +19,39 @@ const NavBar = () => {
 
         {/* Desktop navigation links */}
         <div className="hidden md:flex space-x-10">
-          <a href="/" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+          <Link to="/" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             HOME
-          </a>
-          <a href="/about" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+          </Link>
+          <Link to="/about" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             ABOUT
-          </a>
-          <a href="/blog" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+          </Link>
+          <Link to="/blog" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             BLOG
-          </a>
-          <a href="/masterclasses" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+          </Link>
+          <Link to="/masterclasses" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             MASTERCLASSES
-          </a>
+          </Link>
         </div>
 
         {/* Logo */}
         <div className="flex items-center justify-center flex-1 md:flex-none">
-          <div className="text-center">
+          <Link to="/" className="text-center">
             <h1 className="font-playfair text-xl md:text-2xl italic">agenda women</h1>
             <p className="text-xs font-montserrat tracking-wider">finding clarity and courage together</p>
-          </div>
+          </Link>
         </div>
 
         {/* Right navigation links */}
         <div className="hidden md:flex space-x-10">
-          <a href="/shop" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+          <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             SHOP
-          </a>
-          <a href="/money-dates" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+          </Link>
+          <Link to="/money-dates" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             #AWMONEYDATES
-          </a>
-          <a href="/summit" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+          </Link>
+          <Link to="/summit" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             #AWSUMMIT2024
-          </a>
+          </Link>
         </div>
 
         {/* Placeholder to balance the layout on mobile */}
@@ -61,27 +62,27 @@ const NavBar = () => {
       {isMenuOpen && (
         <div className="md:hidden py-4 px-4 bg-agenda-light">
           <div className="flex flex-col space-y-4">
-            <a href="/" className="font-montserrat text-sm font-medium tracking-widest">
+            <Link to="/" className="font-montserrat text-sm font-medium tracking-widest">
               HOME
-            </a>
-            <a href="/about" className="font-montserrat text-sm font-medium tracking-widest">
+            </Link>
+            <Link to="/about" className="font-montserrat text-sm font-medium tracking-widest">
               ABOUT
-            </a>
-            <a href="/blog" className="font-montserrat text-sm font-medium tracking-widest">
+            </Link>
+            <Link to="/blog" className="font-montserrat text-sm font-medium tracking-widest">
               BLOG
-            </a>
-            <a href="/masterclasses" className="font-montserrat text-sm font-medium tracking-widest">
+            </Link>
+            <Link to="/masterclasses" className="font-montserrat text-sm font-medium tracking-widest">
               MASTERCLASSES
-            </a>
-            <a href="/shop" className="font-montserrat text-sm font-medium tracking-widest">
+            </Link>
+            <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest">
               SHOP
-            </a>
-            <a href="/money-dates" className="font-montserrat text-sm font-medium tracking-widest">
+            </Link>
+            <Link to="/money-dates" className="font-montserrat text-sm font-medium tracking-widest">
               #AWMONEYDATES
-            </a>
-            <a href="/summit" className="font-montserrat text-sm font-medium tracking-widest">
+            </Link>
+            <Link to="/summit" className="font-montserrat text-sm font-medium tracking-widest">
               #AWSUMMIT2024
-            </a>
+            </Link>
           </div>
         </div>
       )}
