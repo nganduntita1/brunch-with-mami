@@ -74,6 +74,31 @@ const articles: Article[] = [
   }
 ];
 
+// Conversation profiles
+const conversationProfiles = [
+  {
+    id: "c1",
+    name: "Noel Milasin",
+    title: "Founder, VC Women",
+    hashtag: "#AWPOWERFIFTY: Noel Milasin",
+    image: "/lovable-uploads/657063aa-4838-4bca-ae05-449713bcc128.png"
+  },
+  {
+    id: "c2",
+    name: "Tania Habimana",
+    title: "Co-Founder, Positive Africa",
+    hashtag: "#AWPOWERFIFTY: Tania Habimana",
+    image: "/lovable-uploads/657063aa-4838-4bca-ae05-449713bcc128.png"
+  },
+  {
+    id: "c3",
+    name: "Mukondi Ralushayi",
+    title: "Co-Founder, The Creative Africa",
+    hashtag: "#AWPOWERFIFTY: Mukondi Ralushayi",
+    image: "/lovable-uploads/657063aa-4838-4bca-ae05-449713bcc128.png"
+  }
+];
+
 // Filter articles by category
 const wellnessArticles = articles.filter(article => article.id.startsWith('w'));
 const workArticles = articles.filter(article => article.id.startsWith('work'));
@@ -109,10 +134,33 @@ const ArticleCard = ({ article }: { article: Article }) => {
   );
 };
 
+// Profile Card Component
+const ProfileCard = ({ profile }: { profile: any }) => {
+  return (
+    <div className="relative">
+      <img 
+        src={profile.image} 
+        alt={profile.name} 
+        className="w-full h-auto"
+      />
+      <div className="absolute top-5 left-5">
+        <p className="text-xs font-medium">{profile.name}</p>
+        <p className="text-xs">{profile.title}</p>
+      </div>
+      <div className="absolute right-5 top-5">
+        <p className="text-sm font-playfair italic text-right">AWPOWER<span className="text-pink-300">50</span></p>
+      </div>
+      <div className="absolute bottom-5 left-0 right-0 text-center">
+        <p className="text-xs font-medium">{profile.hashtag}</p>
+      </div>
+    </div>
+  );
+};
+
 // Content Section Component with Wellness and Work sections
 const ContentSection = () => {
   return (
-    <section className="bg-agenda-light py-16">
+    <section className="bg-agenda-light pb-0">
       {/* Wellness Section */}
       <div className="mb-24">
         <div 
@@ -182,7 +230,7 @@ const ContentSection = () => {
       </div>
       
       {/* Conversations Section */}
-      <div>
+      <div className="mb-24">
         <div 
           className="relative h-[350px] mb-16 bg-cover bg-center flex items-center justify-center" 
           style={{
@@ -197,6 +245,14 @@ const ContentSection = () => {
             <Button className="bg-white text-black hover:bg-white/90 uppercase text-sm tracking-wider">
               LEARN MORE
             </Button>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-4 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {conversationProfiles.map((profile) => (
+              <ProfileCard key={profile.id} profile={profile} />
+            ))}
           </div>
         </div>
       </div>

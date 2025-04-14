@@ -5,6 +5,9 @@ import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import MasterclassSection from "../components/MasterclassSection";
 import ContentSection from "../components/ContentSection";
+import NewsletterSection from "../components/NewsletterSection";
+import InstagramFeed from "../components/InstagramFeed";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (
@@ -15,7 +18,10 @@ const Index = () => {
         <HeroSection />
         <MasterclassSection />
         <ContentSection />
+        <NewsletterSection />
+        <InstagramFeed />
       </main>
+      <Footer />
     </div>
   );
 };
