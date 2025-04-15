@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Shop from "./pages/Shop";
+import ShopAdmin from "./pages/ShopAdmin";
 import Events from "./pages/Events";
 import Membership from "./pages/Membership";
 import NotFound from "./pages/NotFound";
@@ -33,6 +34,7 @@ function App() {
               <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/events" element={<Events />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/shop/admin" element={<ShopAdmin />} />
               <Route path="/membership" element={<Membership />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
