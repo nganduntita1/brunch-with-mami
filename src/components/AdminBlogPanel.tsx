@@ -21,7 +21,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert";
+} from "@/components/ui/alert-dialog";
 import BlogPostForm from "@/components/BlogPostForm";
 import { format } from "date-fns";
 import { Plus, Pencil, Trash2, LogOut } from "lucide-react";
