@@ -57,6 +57,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const checkIfAdmin = async (email: string) => {
     try {
+      // Check against the hardcoded admin credentials
+      const isHardcodedAdmin = email === 'brunchwithus';
+      
+      if (isHardcodedAdmin) {
+        setIsAdmin(true);
+        return;
+      }
+
+      // Fallback to database check for other admin users
       const { data, error } = await supabase
         .from('admins')
         .select('*')

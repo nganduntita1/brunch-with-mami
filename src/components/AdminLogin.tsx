@@ -12,6 +12,8 @@ import {
   CardTitle 
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { toast } from "@/components/ui/sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -23,7 +25,35 @@ export default function AdminLogin() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      await signIn(email, password);
+      // Check against hardcoded admin credentials first
+      if (email === 'brunchwithus' && password === 'admin1234') {
+        // Perform a sign-in with these credentials
+        const { error } = await signIn(email, password);
+        
+        if (error) {
+          // If Supabase sign-in fails, try alternative method
+          const { data, error: authError } = await supabase.auth.signUp({
+            email,
+            password,
+          });
+
+          if (authError) {
+            toast.error("Login failed", {
+              description: authError.message,
+            });
+            return;
+          }
+        }
+      } else {
+        // Regular sign-in for other users
+        const { error } = await signIn(email, password);
+        
+        if (error) {
+          toast.error("Login failed", {
+            description: error.message,
+          });
+        }
+      }
     } finally {
       setIsLoading(false);
     }
@@ -34,7 +64,7 @@ export default function AdminLogin() {
       <CardHeader>
         <CardTitle className="text-center">Admin Login</CardTitle>
         <CardDescription className="text-center">
-          Login to manage blog posts
+          Login to manage blog posts and site content
         </CardDescription>
       </CardHeader>
       <form onSubmit={handleSubmit}>
