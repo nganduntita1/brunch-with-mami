@@ -106,8 +106,6 @@ const BlogPostPage = () => {
             )}
 
             <div className="prose prose-lg max-w-none">
-              {/* For simplicity, we're displaying the content as plain text,
-                  but in a real app you might want to use a rich text editor/renderer */}
               {post.content.split('\n').map((paragraph, index) => (
                 <p key={index} className="mb-4">{paragraph}</p>
               ))}
