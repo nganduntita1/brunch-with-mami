@@ -24,15 +24,19 @@ const NewsletterSection = () => {
     <section 
       className="py-16 relative bg-cover bg-center text-white"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&q=75&fit=crop&w=1000')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&q=75&fit=crop&w=1000')`,
         backgroundPosition: "center 70%"
       }}
     >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-playfair mb-12 tracking-wide uppercase text-white">
-            JOIN THE TRIBE
+          <h2 className="text-4xl font-playfair mb-6 tracking-wide uppercase text-white">
+            BE PART OF THE SISTERHOOD
           </h2>
+          
+          <p className="text-lg mb-8">
+            Join our newsletter and stay updated with the latest events, opportunities and resources
+          </p>
           
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -107,7 +111,7 @@ const NewsletterSection = () => {
                   type="submit" 
                   className="bg-transparent hover:bg-white/20 border border-white text-white uppercase tracking-widest px-12 py-6"
                 >
-                  SUBMIT
+                  JOIN THE SISTERHOOD
                 </Button>
               </div>
             </form>

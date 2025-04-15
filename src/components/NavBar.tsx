@@ -28,15 +28,15 @@ const NavBar = () => {
           <Link to="/blog" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             BLOG
           </Link>
-          <Link to="/masterclasses" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
-            MASTERCLASSES
+          <Link to="/events" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            EVENTS & COURSES
           </Link>
         </div>
 
         {/* Logo */}
         <div className="flex items-center justify-center flex-1 md:flex-none">
           <Link to="/" className="text-center">
-            <h1 className="font-playfair text-xl md:text-2xl italic">agenda women</h1>
+            <h1 className="font-playfair text-xl md:text-2xl italic">brunch with mami</h1>
             <p className="text-xs font-montserrat tracking-wider">finding clarity and courage together</p>
           </Link>
         </div>
@@ -46,11 +46,8 @@ const NavBar = () => {
           <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             SHOP
           </Link>
-          <Link to="/money-dates" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
-            #AWMONEYDATES
-          </Link>
-          <Link to="/summit" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
-            #AWSUMMIT2024
+          <Link to="/membership" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            MEMBERSHIP
           </Link>
         </div>
 
@@ -71,17 +68,14 @@ const NavBar = () => {
             <Link to="/blog" className="font-montserrat text-sm font-medium tracking-widest">
               BLOG
             </Link>
-            <Link to="/masterclasses" className="font-montserrat text-sm font-medium tracking-widest">
-              MASTERCLASSES
+            <Link to="/events" className="font-montserrat text-sm font-medium tracking-widest">
+              EVENTS & COURSES
             </Link>
             <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest">
               SHOP
             </Link>
-            <Link to="/money-dates" className="font-montserrat text-sm font-medium tracking-widest">
-              #AWMONEYDATES
-            </Link>
-            <Link to="/summit" className="font-montserrat text-sm font-medium tracking-widest">
-              #AWSUMMIT2024
+            <Link to="/membership" className="font-montserrat text-sm font-medium tracking-widest">
+              MEMBERSHIP
             </Link>
           </div>
         </div>
