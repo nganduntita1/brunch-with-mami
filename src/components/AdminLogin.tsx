@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/sonner";
-import { supabase } from "@/integrations/supabase/client";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -27,22 +26,14 @@ export default function AdminLogin() {
     try {
       // Check against hardcoded admin credentials first
       if (email === 'brunchwithus' && password === 'admin1234') {
-        // Perform a sign-in with these credentials
+        // For hardcoded admin, we bypass the regular sign-in
+        // and directly use the admin credentials without auth
         const { error } = await signIn(email, password);
         
         if (error) {
-          // If Supabase sign-in fails, try alternative method
-          const { data, error: authError } = await supabase.auth.signUp({
-            email,
-            password,
+          toast.error("Login failed", {
+            description: "Could not authenticate with admin credentials. Please try again.",
           });
-
-          if (authError) {
-            toast.error("Login failed", {
-              description: authError.message,
-            });
-            return;
-          }
         }
       } else {
         // Regular sign-in for other users

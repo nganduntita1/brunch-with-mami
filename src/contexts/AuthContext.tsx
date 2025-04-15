@@ -86,6 +86,40 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signIn = async (email: string, password: string) => {
     try {
+      // Special case for hardcoded admin
+      if (email === 'brunchwithus' && password === 'admin1234') {
+        // For the hardcoded admin, we'll set admin status directly
+        setIsAdmin(true);
+        
+        // Try to sign in with Supabase
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+        
+        // If there's an error (likely because the admin user doesn't exist in auth),
+        // we'll create a fake session to bypass authentication
+        if (error) {
+          console.log("Setting up admin session manually");
+          
+          // Create a mock user and session for the admin
+          const mockUser = {
+            id: 'admin-hardcoded',
+            email: email,
+            role: 'admin',
+          };
+          
+          setUser(mockUser as any);
+          setIsAdmin(true);
+          
+          // Still return the error so the component knows to handle it
+          return { error };
+        }
+        
+        return { error: null };
+      }
+      
+      // Regular sign in for non-hardcoded admins
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -108,6 +142,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signOut = async () => {
     try {
       await supabase.auth.signOut();
+      setIsAdmin(false);
       toast.success("Logged out successfully");
     } catch (error) {
       console.error("Sign out error:", error);
