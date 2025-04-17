@@ -12,7 +12,6 @@ import BlogPost from "./pages/BlogPost";
 import Shop from "./pages/Shop";
 import ShopAdmin from "./pages/ShopAdmin";
 import Events from "./pages/Events";
-import Membership from "./pages/Membership";
 import NotFound from "./pages/NotFound";
 
 // Create a client
@@ -35,7 +34,6 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/shop/admin" element={<ShopAdmin />} />
-              <Route path="/membership" element={<Membership />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

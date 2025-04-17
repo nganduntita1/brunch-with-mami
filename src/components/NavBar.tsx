@@ -44,10 +44,7 @@ const NavBar = () => {
         {/* Right navigation links */}
         <div className="hidden md:flex space-x-10">
           <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
-            SHOP
-          </Link>
-          <Link to="/membership" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
-            MEMBERSHIP
+            SHOP & MEMBERSHIP
           </Link>
         </div>
 
@@ -72,10 +69,7 @@ const NavBar = () => {
               EVENTS & COURSES
             </Link>
             <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest">
-              SHOP
-            </Link>
-            <Link to="/membership" className="font-montserrat text-sm font-medium tracking-widest">
-              MEMBERSHIP
+              SHOP & MEMBERSHIP
             </Link>
           </div>
         </div>
