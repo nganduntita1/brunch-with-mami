@@ -112,8 +112,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           setUser(mockUser as any);
           setIsAdmin(true);
           
-          // Still return the error so the component knows to handle it
-          return { error };
+          toast.success("Logged in as admin");
+          return { error: null };
         }
         
         return { error: null };
@@ -126,12 +126,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
 
       if (error) {
-        toast.error("Login failed", {
-          description: error.message,
-        });
         return { error };
       }
 
+      toast.success("Logged in successfully");
       return { error: null };
     } catch (error) {
       console.error("Sign in error:", error);
@@ -143,6 +141,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
       await supabase.auth.signOut();
       setIsAdmin(false);
+      setUser(null);
+      setSession(null);
       toast.success("Logged out successfully");
     } catch (error) {
       console.error("Sign out error:", error);

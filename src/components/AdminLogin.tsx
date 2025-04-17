@@ -24,26 +24,14 @@ export default function AdminLogin() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      // Check against hardcoded admin credentials first
-      if (email === 'brunchwithus' && password === 'admin1234') {
-        // For hardcoded admin, we bypass the regular sign-in
-        // and directly use the admin credentials without auth
-        const { error } = await signIn(email, password);
-        
-        if (error) {
-          toast.error("Login failed", {
-            description: "Could not authenticate with admin credentials. Please try again.",
-          });
-        }
-      } else {
-        // Regular sign-in for other users
-        const { error } = await signIn(email, password);
-        
-        if (error) {
-          toast.error("Login failed", {
-            description: error.message,
-          });
-        }
+      // Pass credentials to signIn method in AuthContext
+      const { error } = await signIn(email, password);
+      
+      // Only show error toast if there's an error
+      if (error) {
+        toast.error("Login failed", {
+          description: "Invalid credentials. Please try again.",
+        });
       }
     } finally {
       setIsLoading(false);
@@ -64,7 +52,7 @@ export default function AdminLogin() {
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
-              type="email"
+              type="text"
               placeholder="admin@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
