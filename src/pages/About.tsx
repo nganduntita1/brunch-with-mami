@@ -1,10 +1,46 @@
 
 import React from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const About = () => {
+  const galleryImages = [
+    {
+      src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&auto=format&fit=crop&q=60",
+      alt: "Women networking at an event",
+      label: "Networking",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1523908511403-7fc7b25592f4?w=800&auto=format&fit=crop&q=60",
+      alt: "Women workshop session",
+      label: "Workshops",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1543269664-7eef42226a21?w=800&auto=format&fit=crop&q=60",
+      alt: "Brunch event setup",
+      label: "Brunches",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1573499950808-f4f384e688bf?w=800&auto=format&fit=crop&q=60",
+      alt: "Women in business casual attire",
+      label: "Business",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&auto=format&fit=crop&q=60",
+      alt: "Women enjoying coffee and conversation",
+      label: "Connections",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1566517694305-ff9c5bffddf3?w=800&auto=format&fit=crop&q=60",
+      alt: "Empowerment session",
+      label: "Empowerment",
+    },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <AnnouncementBar />
@@ -44,6 +80,33 @@ const About = () => {
                 We support women entrepreneurs across Africa.
               </p>
             </div>
+            
+            {/* Photo Gallery */}
+            <div className="my-16">
+              <h2 className="font-playfair text-2xl md:text-3xl italic text-center mb-6">Brunch with MAMI Moments</h2>
+              <p className="text-center mb-8">Explore the various facets of our community through these images</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {galleryImages.map((image, index) => (
+                  <Card key={index} className="overflow-hidden group">
+                    <div className="relative">
+                      <AspectRatio ratio={1} className="bg-muted">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </AspectRatio>
+                      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+                        <p className="font-montserrat text-sm font-medium">{image.label}</p>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            
+            <Separator className="my-12" />
             
             {/* Meet the Founder Section */}
             <div>

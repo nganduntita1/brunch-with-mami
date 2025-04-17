@@ -8,17 +8,9 @@ const NavBar = () => {
 
   return (
     <nav className="py-6 px-4 md:px-8 lg:px-16 bg-agenda-light">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Mobile menu button */}
-        <button
-          className="block md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        {/* Desktop navigation links */}
-        <div className="hidden md:flex space-x-10">
+      <div className="container mx-auto grid grid-cols-3 items-center">
+        {/* Left navigation links - desktop */}
+        <div className="hidden md:flex space-x-6 justify-start">
           <Link to="/" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             HOME
           </Link>
@@ -28,28 +20,35 @@ const NavBar = () => {
           <Link to="/blog" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
             BLOG
           </Link>
-          <Link to="/events" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
-            EVENTS & COURSES
-          </Link>
         </div>
 
-        {/* Logo */}
-        <div className="flex items-center justify-center flex-1 md:flex-none">
+        {/* Mobile menu button */}
+        <div className="flex md:hidden">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Logo - always centered */}
+        <div className="flex justify-center">
           <Link to="/" className="text-center">
             <h1 className="font-playfair text-xl md:text-2xl italic">brunch with mami</h1>
             <p className="text-xs font-montserrat tracking-wider">finding clarity and courage together</p>
           </Link>
         </div>
 
-        {/* Right navigation links */}
-        <div className="hidden md:flex space-x-10">
+        {/* Right navigation links - desktop */}
+        <div className="hidden md:flex space-x-6 justify-end">
+          <Link to="/events" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            EVENTS & COURSES
+          </Link>
           <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
-            SHOP & MEMBERSHIP
+            SHOP
           </Link>
         </div>
 
-        {/* Placeholder to balance the layout on mobile */}
-        <div className="block md:hidden w-6"></div>
+        {/* Empty div for mobile to maintain grid structure */}
+        <div className="md:hidden"></div>
       </div>
 
       {/* Mobile menu */}
@@ -69,7 +68,7 @@ const NavBar = () => {
               EVENTS & COURSES
             </Link>
             <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest">
-              SHOP & MEMBERSHIP
+              SHOP
             </Link>
           </div>
         </div>
