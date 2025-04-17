@@ -13,23 +13,23 @@ const NavBar = () => {
         <div className="hidden md:flex justify-between items-center">
           {/* Left nav links */}
           <div className="flex space-x-6">
-            <Link to="/" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            <Link to="/" className="font-montserrat text-sm font-bold tracking-widest hover:text-gray-600 transition-colors duration-300">
               HOME
             </Link>
-            <Link to="/about" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            <Link to="/about" className="font-montserrat text-sm font-bold tracking-widest hover:text-gray-600 transition-colors duration-300">
               ABOUT
             </Link>
-            <Link to="/blog" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            <Link to="/blog" className="font-montserrat text-sm font-bold tracking-widest hover:text-gray-600 transition-colors duration-300">
               BLOG
             </Link>
-            <Link to="/events" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            <Link to="/events" className="font-montserrat text-sm font-bold tracking-widest hover:text-gray-600 transition-colors duration-300">
               EVENTS & COURSES
             </Link>
           </div>
           
           {/* Right nav links */}
           <div className="flex space-x-6">
-            <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest hover:text-gray-600 transition-colors duration-300">
+            <Link to="/shop" className="font-montserrat text-sm font-bold tracking-widest hover:text-gray-600 transition-colors duration-300">
               SHOP
             </Link>
           </div>
@@ -55,19 +55,19 @@ const NavBar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 px-4 bg-agenda-light absolute top-12 left-0 right-0 z-10">
             <div className="flex flex-col space-y-4 pt-10">
-              <Link to="/" className="font-montserrat text-sm font-medium tracking-widest">
+              <Link to="/" className="font-montserrat text-sm font-bold tracking-widest">
                 HOME
               </Link>
-              <Link to="/about" className="font-montserrat text-sm font-medium tracking-widest">
+              <Link to="/about" className="font-montserrat text-sm font-bold tracking-widest">
                 ABOUT
               </Link>
-              <Link to="/blog" className="font-montserrat text-sm font-medium tracking-widest">
+              <Link to="/blog" className="font-montserrat text-sm font-bold tracking-widest">
                 BLOG
               </Link>
-              <Link to="/events" className="font-montserrat text-sm font-medium tracking-widest">
+              <Link to="/events" className="font-montserrat text-sm font-bold tracking-widest">
                 EVENTS & COURSES
               </Link>
-              <Link to="/shop" className="font-montserrat text-sm font-medium tracking-widest">
+              <Link to="/shop" className="font-montserrat text-sm font-bold tracking-widest">
                 SHOP
               </Link>
             </div>

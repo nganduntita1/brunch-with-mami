@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { useAuth } from "@/contexts/AuthContext";
@@ -60,12 +59,12 @@ const Blog = () => {
       <NavBar />
       <main className="flex-1 py-12">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="font-playfair text-3xl md:text-4xl italic">Our Blog</h1>
+          <div className="flex justify-center items-center mb-8">
+            <h1 className="font-playfair text-3xl md:text-4xl italic text-center">Our Blog</h1>
             {isAdmin && (
               <Link 
                 to="/blog/admin" 
-                className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium"
+                className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium ml-4"
               >
                 Manage Blog
               </Link>
