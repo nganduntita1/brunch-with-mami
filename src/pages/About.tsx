@@ -1,7 +1,6 @@
 
 import React from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
@@ -45,124 +44,138 @@ const About = () => {
     <div className="min-h-screen flex flex-col">
       <AnnouncementBar />
       <NavBar />
-      <main className="flex-1 py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="font-playfair text-3xl md:text-4xl italic text-center mb-8">About Us</h1>
+      
+      {/* Hero Section - Full width background image */}
+      <div className="w-full h-[60vh] relative overflow-hidden mb-16">
+        <img 
+          src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1600&auto=format&fit=crop&q=60" 
+          alt="Brunch with MAMI event" 
+          className="w-full h-full object-cover brightness-75"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
+          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl italic text-center mb-4">
+            A CURATED SPACE FOR MODERN WORKING WOMEN
+          </h1>
+        </div>
+      </div>
+
+      {/* About Section */}
+      <div className="w-full px-4 md:px-8 lg:px-16 mb-16">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-lg mb-6">
+            Brunch with MAMI is a networking and empowerment event for women, founded in 2021. 
+            The Brunch has been curated to provide women with skills, empowerment and networks that 
+            will help them navigate the evolving dynamics of being a woman through the lens of the communities shared experiences.
+          </p>
           
-          <div className="max-w-3xl mx-auto mb-16">
-            <div className="mb-12">
-              <img 
-                src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&auto=format&fit=crop&q=60" 
-                alt="Women networking at Brunch with MAMI event" 
-                className="w-full h-64 md:h-96 object-cover rounded-lg mb-8"
+          <p className="text-lg mb-6">
+            Everyone's definition of success is very different. We support women to 
+            achieve their definition of success through empowerment, skills sharing, workshops, 
+            webinars, and access to information, online tools and networking.
+          </p>
+        </div>
+      </div>
+
+      {/* Mission Statement Section */}
+      <div className="w-full bg-agenda-pink py-12 px-4 md:px-8 mb-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-playfair text-xl md:text-2xl uppercase font-bold mb-6">
+            "OUR MISSION IS TO HELP YOU FIND HARMONY BETWEEN YOUR WORK AND WELLNESS THROUGH CONTENT AND PROGRAMMING THAT GIVES YOU THE CONFIDENCE TO OWN YOUR FUTURE"
+          </h2>
+        </div>
+      </div>
+
+      {/* Photo Gallery - Full width, 2x3 grid */}
+      <div className="w-full mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
+          {galleryImages.map((image, index) => (
+            <div key={index} className="relative aspect-square overflow-hidden">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
-              
-              <p className="mb-6">
-                Brunch with MAMI is a networking and empowerment event for women, founded in 2021. 
-                The Brunch has been curated to provide women with skills, empowerment and networks that 
-                will enable them to achieve success on their own terms.
-              </p>
-              
-              <p className="mb-6">
-                Everyone's definition of success is very different. We support women to 
-                achieve their definition of success through empowerment, skills sharing, workshops, 
-                webinars, and access to information, online tools and networking.
-              </p>
-              
-              <p className="mb-6">
-                Our blogs are designed to enrich different aspects of every woman's life, 
-                to assist her in navigating life seamlessly, through health and fitness tips and stories, 
-                beauty tips, opportunities, self-development and more…
-              </p>
-              
-              <p>
-                Explore our shop to see all the female business owned products, curated with love and care. 
-                We support women entrepreneurs across Africa.
-              </p>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Two Column Content Section */}
+      <div className="w-full px-4 md:px-8 lg:px-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div>
+            <p className="mb-6">
+              We understand the importance of creating safe spaces where women can find and maintain social connections so they can navigate the world with confidence and build up the assurance that their ideas, opinions and experiences are valid, heard and truly understood.
+            </p>
             
-            {/* Photo Gallery */}
-            <div className="my-16">
-              <h2 className="font-playfair text-2xl md:text-3xl italic text-center mb-6">Brunch with MAMI Moments</h2>
-              <p className="text-center mb-8">Explore the various facets of our community through these images</p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {galleryImages.map((image, index) => (
-                  <Card key={index} className="overflow-hidden group">
-                    <div className="relative">
-                      <AspectRatio ratio={1} className="bg-muted">
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </AspectRatio>
-                      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
-                        <p className="font-montserrat text-sm font-medium">{image.label}</p>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
+            <p>
+              Our blogs are designed to enrich different aspects of every woman's life, 
+              to assist her in navigating life seamlessly, through health and fitness tips and stories, 
+              beauty tips, opportunities, self-development and more…
+            </p>
+          </div>
+          
+          <div>
+            <p className="mb-6">
+              As an extension to the online conversations we create offline experiences that help women connect and create opportunities for peer to peer mentorship.
+            </p>
             
-            <Separator className="my-12" />
+            <p className="mb-6">
+              Our Purpose is to Give Women The <span className="font-bold">CONFIDENCE</span> To Own Their Future. This is why we exist, this is our centre of gravity.
+            </p>
             
-            {/* Meet the Founder Section */}
-            <div>
-              <h2 className="font-playfair text-2xl md:text-3xl italic text-center mb-8">Meet MAMI - The Founder</h2>
-              
-              <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
-                <img 
-                  src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=500&auto=format&fit=crop&q=60" 
-                  alt="Mamahlape - MAMI" 
-                  className="w-full md:w-1/3 h-64 object-cover rounded-lg"
-                />
-                
-                <div className="md:w-2/3">
-                  <p className="italic mb-4">Hi there!</p>
-                  
-                  <p className="mb-4">
-                    My name is Mamahlape, now famously known as MAMI to my beautiful sisterhood of the Brunch. 
-                    To understand who I am, I think we need to back track a bit. My journey started in my parent's 
-                    garage when I was about 8 years old, where I would invite my peers to sit on old paint tin buckets 
-                    as I taught them whatever skill I just acquired or lend them my story books. It quickly got famous 
-                    around the neighbors in my village that if you are looking for your child he/she is probably in my 
-                    parent's garage. Little did I know then that my purpose is probably bringing people together, 
-                    equipping them with new skills.
-                  </p>
-                </div>
-              </div>
-              
-              <p className="mb-4">
-                In 2013 I represented my country, at the 63rd edition of Miss world as Miss Lesotho, and I think 
-                my perspective on life pretty much changed then, from what one can achieve, and limitless possibilities 
-                around us. This then fueled the 8-year-old in me that loved connecting people and assisting them tap 
-                into their greatest selves. If I got to live in my dream so could everyone else.
-              </p>
-              
-              <p className="mb-4">
-                Fast forward post university after studying something I absolutely love with my whole heart, I knew 
-                there was still something missing in my life, I still longed for a space where people come together 
-                and skills are shared, conversations are had but in the most intimate and safe way. My love and respect 
-                for women had always been profound. My dad passed from cancer at the age of 17, and since then I saw my 
-                mother work so hard and be an epitome of what I call a strong woman. I have also always been surrounded 
-                by women who support and guide me, from pageantry, to friends and strangers I met along the way. So Brunch 
-                with MAMI was born from my purpose of connecting people and allowing them to grow and achieve success on 
-                their own terms, and my love and respect for women and what they represent in my life.
-              </p>
-              
-              <p>
-                In a nutshell, I am a woman who wears many hats with passion and dedication, I am the founder of Brunch 
-                with MAMI, a platform I hold dear because of the impact it has had for women. I am an environmentalist who 
-                through my company Smart Environmental Solutions I strive to increase food security in Africa through climate 
-                change mitigation and adaptation, I am daughter to a beautiful woman who has moved mountains for me and 
-                introduced me to the business world, a sister, an aunt, a friend, and a lover.
-              </p>
-            </div>
+            <p className="italic">
+              Welcome to the tribe.<br />
+              xoxo...
+            </p>
           </div>
         </div>
-      </main>
+      </div>
+
+      {/* Meet the Founder Section */}
+      <div className="w-full px-4 md:px-8 lg:px-16 mb-16">
+        <h2 className="font-playfair text-3xl md:text-4xl text-center uppercase mb-12">Meet Our Founder</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="order-2 md:order-1">
+            <p className="italic mb-4">Hi there!</p>
+            
+            <p className="mb-6">
+              My name is Mamahlape, now famously known as MAMI to my beautiful sisterhood of the Brunch. 
+              To understand who I am, I think we need to back track a bit. My journey started in my parent's 
+              garage when I was about 8 years old, where I would invite my peers to sit on old paint tin buckets 
+              as I taught them whatever skill I just acquired or lend them my story books.
+            </p>
+            
+            <p className="mb-6">
+              In 2013 I represented my country, at the 63rd edition of Miss world as Miss Lesotho, and I think 
+              my perspective on life pretty much changed then, from what one can achieve, and limitless possibilities 
+              around us. This then fueled the 8-year-old in me that loved connecting people and assisting them tap 
+              into their greatest selves.
+            </p>
+            
+            <p className="mb-6">
+              Fast forward post university after studying something I absolutely love with my whole heart, I knew 
+              there was still something missing in my life, I still longed for a space where people come together 
+              and skills are shared, conversations are had but in the most intimate and safe way.
+            </p>
+            
+            <p>
+              In a nutshell, I am a woman who wears many hats with passion and dedication, I am the founder of Brunch 
+              with MAMI, a platform I hold dear because of the impact it has had for women.
+            </p>
+          </div>
+          
+          <div className="order-1 md:order-2">
+            <img 
+              src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=800&auto=format&fit=crop&q=60" 
+              alt="Mamahlape - MAMI" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );
