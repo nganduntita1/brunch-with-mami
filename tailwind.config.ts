@@ -67,13 +67,14 @@ export default {
 				agenda: {
 					'pink': '#F8E9EB',
 					'dark': '#1A1A1A',
-					'light': '#FAF7F7',
+					'light': '#F7EDE8',
 					'gray': '#8A8A8A',
 				},
 			},
 			fontFamily: {
 				'playfair': ['Playfair Display', 'serif'],
 				'montserrat': ['Montserrat', 'sans-serif'],
+				seasons: ['"The Seasons"', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

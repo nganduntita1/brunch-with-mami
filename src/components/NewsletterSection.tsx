@@ -24,7 +24,7 @@ const NewsletterSection = () => {
     <section 
       className="py-16 relative bg-cover bg-center text-white"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&q=75&fit=crop&w=1000')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/public/img5.jpg')`,
         backgroundPosition: "center 70%"
       }}
     >

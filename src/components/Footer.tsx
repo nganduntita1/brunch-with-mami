@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <p className="uppercase text-xs tracking-widest mb-4">#AWPOWERFIFTY SHOP</p>
+          <p className="uppercase text-xs tracking-widest mb-4"></p>
           
           <div className="flex justify-center space-x-6">
             <a href="#" className="text-gray-600 hover:text-black transition-colors">
@@ -35,7 +35,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 pt-6">
           <div className="text-center text-xs text-gray-500">
-            <p>&copy; {new Date().getFullYear()} Agenda Women. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Brunch With MAMI. All rights reserved.</p>
             <div className="mt-2 space-x-4">
               <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-black transition-colors">Terms of Service</a>

@@ -33,7 +33,7 @@ const Events = () => {
       time: "5:30 PM - 7:30 PM",
       location: "Virtual Event",
       description: "Learn the fundamentals of investing while enjoying cake in this relaxed virtual setting designed for financial beginners.",
-      image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=500&auto=format&fit=crop&q=60"
+      image: "./public/1.jpg"
     }
   ];
 
@@ -47,7 +47,7 @@ const Events = () => {
       description: "A comprehensive 6-week program covering personal finance essentials from budgeting to investing, specifically designed for women.",
       topics: ["Creating a personalized budget", "Debt management strategies", "Building an emergency fund", "Introduction to investing", "Retirement planning", "Estate planning basics"],
       price: "M450",
-      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=500&auto=format&fit=crop&q=60"
+      image: "./public/1.jpg"
     }
   ];
 
@@ -60,7 +60,7 @@ const Events = () => {
           <h1 className="font-playfair text-3xl md:text-4xl italic text-center mb-8">Events & Courses</h1>
           
           {/* Upcoming Events Section */}
-          <section className="mb-16">
+          {/* <section className="mb-16">
             <h2 className="font-playfair text-2xl md:text-3xl text-center mb-8">Upcoming Events</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,7 +102,7 @@ const Events = () => {
                 </div>
               ))}
             </div>
-          </section>
+          </section> */}
           
           {/* Courses Section */}
           <section>

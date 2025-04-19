@@ -17,7 +17,7 @@ const Index = () => {
       <main className="flex-1">
         <HeroSection />
         <MasterclassSection />
-        <ContentSection />
+        {/* <ContentSection /> */}
         <NewsletterSection />
         <InstagramFeed />
       </main>

@@ -9,32 +9,32 @@ import Footer from "../components/Footer";
 const About = () => {
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&auto=format&fit=crop&q=60",
+      src: "./public/img3.jpeg",
       alt: "Women networking at an event",
       label: "Networking",
     },
     {
-      src: "https://images.unsplash.com/photo-1523908511403-7fc7b25592f4?w=800&auto=format&fit=crop&q=60",
+      src: "./public/img2.jpg",
       alt: "Women workshop session",
       label: "Workshops",
     },
     {
-      src: "https://images.unsplash.com/photo-1543269664-7eef42226a21?w=800&auto=format&fit=crop&q=60",
+      src: "./public/img4.jpeg",
       alt: "Brunch event setup",
       label: "Brunches",
     },
     {
-      src: "https://images.unsplash.com/photo-1573499950808-f4f384e688bf?w=800&auto=format&fit=crop&q=60",
+      src: "./public/img6.jpeg",
       alt: "Women in business casual attire",
       label: "Business",
     },
     {
-      src: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&auto=format&fit=crop&q=60",
+      src: "./public/img7.jpeg",
       alt: "Women enjoying coffee and conversation",
       label: "Connections",
     },
     {
-      src: "https://images.unsplash.com/photo-1566517694305-ff9c5bffddf3?w=800&auto=format&fit=crop&q=60",
+      src: "./public/img12.jpg",
       alt: "Empowerment session",
       label: "Empowerment",
     },
@@ -48,7 +48,7 @@ const About = () => {
       {/* Hero Section - Full width background image */}
       <div className="w-full h-[60vh] relative overflow-hidden mb-16">
         <img 
-          src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1600&auto=format&fit=crop&q=60" 
+          src="./public/img3.jpeg" 
           alt="Brunch with MAMI event" 
           className="w-full h-full object-cover brightness-75"
         />
@@ -168,7 +168,7 @@ const About = () => {
           
           <div className="order-1 md:order-2">
             <img 
-              src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=800&auto=format&fit=crop&q=60" 
+              src="./public/1.jpg" 
               alt="Mamahlape - MAMI" 
               className="w-full h-full object-cover"
             />
