@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import img1 from '../assets/1.JPG';
+import img1 from '../assets/1.jpg';
 
 import img2 from "../assets/img2.JPG";
 import img3 from "../assets/img3.jpeg";
