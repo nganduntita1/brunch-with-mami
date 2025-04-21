@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="../../public/hero.png"
+          src="../../public/Hero.png"
           alt="Hero background"
           className="w-full h-full object-cover"
         />
