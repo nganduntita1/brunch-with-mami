@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram } from 'lucide-react';
+import hero from '../assets/Hero.png'
 
 const HeroSection = () => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="../../public/Hero.png"
+          src={hero}
           alt="Hero background"
           className="w-full h-full object-cover"
         />
