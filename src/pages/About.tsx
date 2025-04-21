@@ -12,7 +12,7 @@ import img3 from "../assets/img3.jpeg";
 import img4 from "../assets/img4.jpeg";
 import img6 from "../assets/img6.jpeg";
 import img7 from "../assets/img7.jpeg";
-import img12 from "../assets/img12.jpg";
+import img12 from "../assets/img12.JPG";
 
 const About = () => {
   const galleryImages = [
