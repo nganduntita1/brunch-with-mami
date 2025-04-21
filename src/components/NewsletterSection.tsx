@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Form, FormField, FormItem, FormControl } from "@/components/ui/form";
-import img5 from '../assets/img5.jpg';
+import img5 from '../assets/img5.JPG';
 
 const NewsletterSection = () => {
   const form = useForm({
