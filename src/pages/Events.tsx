@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin } from "lucide-react";
+import img1 from '../assets/1.jpg';
 
 const Events = () => {
   const upcomingEvents = [
@@ -47,7 +48,7 @@ const Events = () => {
       description: "A comprehensive 6-week program covering personal finance essentials from budgeting to investing, specifically designed for women.",
       topics: ["Creating a personalized budget", "Debt management strategies", "Building an emergency fund", "Introduction to investing", "Retirement planning", "Estate planning basics"],
       price: "M450",
-      image: "./public/1.jpg"
+      image: img1
     }
   ];
 

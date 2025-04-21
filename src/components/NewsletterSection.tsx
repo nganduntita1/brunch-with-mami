@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Form, FormField, FormItem, FormControl } from "@/components/ui/form";
+import img5 from '../assets/img5.jpg';
 
 const NewsletterSection = () => {
   const form = useForm({
@@ -24,7 +25,7 @@ const NewsletterSection = () => {
     <section 
       className="py-16 relative bg-cover bg-center text-white"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/public/img5.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${img5})`,
         backgroundPosition: "center 70%"
       }}
     >

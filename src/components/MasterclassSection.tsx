@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import img1 from '../assets/1.jpg';
 
 const MasterclassSection = () => {
   return (
@@ -15,7 +16,7 @@ const MasterclassSection = () => {
       {/* Full-width, full-height Image with Text Overlay */}
       <div className="relative w-full h-screen lg:h-[2200px] bg-[#ad9a90] mt-5">
         <img
-          src="/public/1.jpg"
+          src={img1}
           alt="Woman in yellow suit - Personal Branding Masterclass"
           className="w-full h-full  object-cover object-center"
         />

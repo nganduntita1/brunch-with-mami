@@ -5,36 +5,44 @@ import { Separator } from "@/components/ui/separator";
 import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import img1 from '../assets/1.jpg';
+
+import img2 from "../assets/img2.jpg";
+import img3 from "../assets/img3.jpeg";
+import img4 from "../assets/img4.jpeg";
+import img6 from "../assets/img6.jpeg";
+import img7 from "../assets/img7.jpeg";
+import img12 from "../assets/img12.jpg";
 
 const About = () => {
   const galleryImages = [
     {
-      src: "./public/img3.jpeg",
+      src: img3,
       alt: "Women networking at an event",
       label: "Networking",
     },
     {
-      src: "./public/img2.jpg",
+      src: img2,
       alt: "Women workshop session",
       label: "Workshops",
     },
     {
-      src: "./public/img4.jpeg",
+      src: img4,
       alt: "Brunch event setup",
       label: "Brunches",
     },
     {
-      src: "./public/img6.jpeg",
+      src: img6,
       alt: "Women in business casual attire",
       label: "Business",
     },
     {
-      src: "./public/img7.jpeg",
+      src: img7,
       alt: "Women enjoying coffee and conversation",
       label: "Connections",
     },
     {
-      src: "./public/img12.jpg",
+      src: img12,
       alt: "Empowerment session",
       label: "Empowerment",
     },
@@ -48,7 +56,7 @@ const About = () => {
       {/* Hero Section - Full width background image */}
       <div className="w-full h-[60vh] relative overflow-hidden mb-16">
         <img 
-          src="./public/img3.jpeg" 
+          src={img3} 
           alt="Brunch with MAMI event" 
           className="w-full h-full object-cover brightness-75"
         />
@@ -168,7 +176,7 @@ const About = () => {
           
           <div className="order-1 md:order-2">
             <img 
-              src="./public/1.jpg" 
+              src={img1} 
               alt="Mamahlape - MAMI" 
               className="w-full h-full object-cover"
             />
