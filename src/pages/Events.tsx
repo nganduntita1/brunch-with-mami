@@ -1,13 +1,37 @@
-
-import React from "react";
+import { type FC } from 'react';
 import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, MapPin } from "lucide-react";
-import img1 from '../assets/1.jpg';
 
-const Events = () => {
+// Import images with type assertions
+import img1 from '../assets/1.jpg';
+import eventImage from '../assets/event-1.jpeg';
+import { Calendar, Clock, MapPin } from 'lucide-react';
+
+interface Course {
+  id: number;
+  title: string;
+  startDate: string;
+  schedule: string;
+  format: string;
+  description: string;
+  topics: string[];
+  price: string;
+  image: any;
+}
+
+interface Event {
+  id: number;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+  image: string;
+}
+
+const Events: FC = () => {
   const upcomingEvents = [
     {
       id: 1,
@@ -61,49 +85,15 @@ const Events = () => {
           <h1 className="font-playfair text-3xl md:text-4xl italic text-center mb-8">Events & Courses</h1>
           
           {/* Upcoming Events Section */}
-          {/* <section className="mb-16">
-            <h2 className="font-playfair text-2xl md:text-3xl text-center mb-8">Upcoming Events</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {upcomingEvents.map((event) => (
-                <div key={event.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="h-48 bg-gray-200 overflow-hidden">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-playfair text-xl mb-3">{event.title}</h3>
-                    
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center">
-                        <Calendar size={16} className="mr-2 text-gray-500" />
-                        <span className="text-sm">{event.date}</span>
-                      </div>
-                      
-                      <div className="flex items-center">
-                        <Clock size={16} className="mr-2 text-gray-500" />
-                        <span className="text-sm">{event.time}</span>
-                      </div>
-                      
-                      <div className="flex items-center">
-                        <MapPin size={16} className="mr-2 text-gray-500" />
-                        <span className="text-sm">{event.location}</span>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600 mb-4">{event.description}</p>
-                    
-                    <Button className="w-full bg-black text-white hover:bg-gray-800">
-                      Register Now
-                    </Button>
-                  </div>
-                </div>
-              ))}
+          <section className="mb-16">
+            <div className="w-full overflow-hidden flex justify-center">
+              <img 
+                src={eventImage} 
+                alt="Upcoming Event"
+                className="max-w-full max-h-[80vh] object-contain"
+              />
             </div>
-          </section> */}
+          </section>
           
           {/* Courses Section */}
           <section>
