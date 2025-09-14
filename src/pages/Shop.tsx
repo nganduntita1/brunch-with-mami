@@ -42,7 +42,7 @@ const Shop = () => {
           
           {/* Membership Section */}
           <div className="max-w-4xl mx-auto mb-16">
-            <h2 className="font-playfair text-2xl md:text-3xl italic text-center mb-8">Join Our Sisterhood</h2>
+            <h2 className="font-playfair text-2xl md:text-3xl italic text-center mb-8">Join Our Inner Circle</h2>
             
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
               {/* Membership Header */}

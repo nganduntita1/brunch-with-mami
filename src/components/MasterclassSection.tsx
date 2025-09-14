@@ -14,7 +14,7 @@ const MasterclassSection = () => {
     {/* Masterclass Banner with full-width, full-height Image */}
     <div className="flex flex-col overflow-hidden ">
       {/* Full-width, full-height Image with Text Overlay */}
-      <div className="relative w-full h-screen lg:h-[2200px] bg-[#ad9a90] mt-5">
+      <div className="relative w-full h-[80vh] lg:h-[1760px] bg-[#ad9a90] mt-5">
         <img
           src={eventImage}
           alt="Upcoming Event - Cake and Finance"

@@ -65,11 +65,11 @@ const Events: FC = () => {
   const courses = [
     {
       id: 1,
-      title: "Cake and Finance: 6-Week Course",
+      title: "Cake and Finance: 6-Month Program",
       startDate: "Starts July 10, 2025",
       schedule: "Weekly sessions - Tuesdays 6:00 PM - 7:30 PM",
       format: "Virtual Course",
-      description: "A comprehensive 6-week program covering personal finance essentials from budgeting to investing, specifically designed for women.",
+      description: "A comprehensive 6-month program covering personal finance essentials from budgeting to investing, specifically designed for women.",
       topics: ["Creating a personalized budget", "Debt management strategies", "Building an emergency fund", "Introduction to investing", "Retirement planning", "Estate planning basics"],
       price: "M450",
       image: img1
@@ -147,7 +147,7 @@ const Events: FC = () => {
                     </div>
                     
                     <Button className="bg-black text-white hover:bg-gray-800 px-8">
-                      Enroll Now
+                      Coming Soon
                     </Button>
                   </div>
                 </div>

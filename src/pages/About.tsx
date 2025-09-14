@@ -113,29 +113,44 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div>
             <p className="mb-6">
-              We understand the importance of creating safe spaces where women can find and maintain social connections so they can navigate the world with confidence and build up the assurance that their ideas, opinions and experiences are valid, heard and truly understood.
+              <span className="font-bold">Why attend the Brunch? </span> 
+              <br />              
+              • Networking 
+              Brunch with MAMI offers a unique opportunity to networking with like minded women in an intimate setting. It gives you an opportunity to share what you do and future aspirations around the table with other women, and just like that you could meet your future mentor, client, business partner etc. 
+            </p>
+
+            <p className="mb-6">
+              • Empowerment 
+              With 2 or more Speakers who join the Brunch to share their life story and nuggets of wisdom, it comes easy to be  empowered. The setting also makes it very easy to fill other women's cups too with your knowledge and skills. It is a beautiful exchange of energy and widsom over Brunch. 
             </p>
             
-            <p>
-              Our blogs are designed to enrich different aspects of every woman's life, 
-              to assist her in navigating life seamlessly, through health and fitness tips and stories, 
-              beauty tips, opportunities, self-development and more…
+            <p className="mb-6">
+              • In a room full of Smart women, you are most likely to walk out with a mentor or be connected with one.  
             </p>
+
+            
           </div>
           
           <div>
-            <p className="mb-6">
-              As an extension to the online conversations we create offline experiences that help women connect and create opportunities for peer to peer mentorship.
-            </p>
             
             <p className="mb-6">
-              Our Purpose is to Give Women The <span className="font-bold">CONFIDENCE</span> To Own Their Future. This is why we exist, this is our centre of gravity.
+              • Food 
+              It is a Brunch after all. Expect welcome cocktails that are Instagram worthy, and brunch spread to break your diet. 
+            </p>
+            <p className="mb-6">
+              • Atmosphere 
+              Imagine a morning in the garden looking good, surrounded by like minded women, a mimosa in hand, uplifting conversations, laughter and smiles. The atmosphere is good for the soul.
+            </p>
+
+            <p className="mb-6">
+              • Fashion 
+              With well curated themes, you get to dress well and fell good. Every woman deserves to look good every now and then, and get out of their comfort zone. 
             </p>
             
-            <p className="italic">
+            {/* <p className="italic">
               Welcome to the tribe.<br />
               xoxo...
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

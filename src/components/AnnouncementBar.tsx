@@ -10,7 +10,7 @@ const AnnouncementBar = () => {
   return (
     <div className="bg-agenda-dark text-white py-2 px-4 text-center relative">
       <p className="text-sm font-montserrat tracking-wide">
-        JOIN THE TRIBE · SIGN UP FOR OUR NEWSLETTER
+        JOIN OUR INNER CIRCLE  · SIGN UP FOR OUR NEWSLETTER
       </p>
       <button
         onClick={() => setIsVisible(false)}
