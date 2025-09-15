@@ -1,5 +1,4 @@
 import { type FC } from 'react';
-import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -78,7 +77,6 @@ const Events: FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AnnouncementBar />
       <NavBar />
       <main className="flex-1 py-12">
         <div className="container mx-auto px-4">

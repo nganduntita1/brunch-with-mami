@@ -2,7 +2,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import AdminLogin from "../components/AdminLogin";
@@ -15,7 +14,6 @@ const ShopAdmin = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col">
-        <AnnouncementBar />
         <NavBar />
         <main className="flex-1 py-12">
           <div className="container mx-auto px-4">
@@ -29,7 +27,6 @@ const ShopAdmin = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AnnouncementBar />
       <NavBar />
       <main className="flex-1 py-12">
         <div className="container mx-auto px-4">

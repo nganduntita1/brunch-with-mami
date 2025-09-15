@@ -112,7 +112,7 @@ const InstagramFeed = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium hover:text-gray-600 transition-colors"
           >
-            <span>@brunchwithmami</span>
+            <span>@brunch_with_mami</span>
             <Instagram className="h-4 w-4" />
           </a>
         </div>

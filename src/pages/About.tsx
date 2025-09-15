@@ -2,7 +2,6 @@
 import React from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
-import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import img1 from '../assets/1.jpg';
@@ -50,7 +49,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AnnouncementBar />
       <NavBar />
       
       {/* Hero Section - Full width background image */}

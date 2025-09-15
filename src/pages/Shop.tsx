@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import AnnouncementBar from "../components/AnnouncementBar";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -24,7 +23,6 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AnnouncementBar />
       <NavBar />
       <main className="flex-1 py-12">
         <div className="container mx-auto px-4">
@@ -42,7 +40,7 @@ const Shop = () => {
           
           {/* Membership Section */}
           <div className="max-w-4xl mx-auto mb-16">
-            <h2 className="font-playfair text-2xl md:text-3xl italic text-center mb-8">Join Our Inner Circle</h2>
+            <h2 className="font-playfair text-2xl md:text-3xl italic text-center mb-8">Join the Sisterhood</h2>
             
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
               {/* Membership Header */}

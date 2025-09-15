@@ -35,7 +35,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 pt-6">
           <div className="text-center text-xs text-gray-500">
-            <p>&copy; {new Date().getFullYear()} Brunch With MAMI. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Brunch with MAMI. All rights reserved.</p>
             <div className="mt-2 space-x-4">
               <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-black transition-colors">Terms of Service</a>

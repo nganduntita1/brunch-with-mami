@@ -23,7 +23,7 @@ const HeroSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-seasons mb-8 md:mb-12 tracking-wide animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            BRINGING WOMEN TOGETHER TO LEARN AND GROW
+            CONNECTING WOMEN FOR KNOWLEDGE AND SUCCESS
           </h2>
           <button
             className="bg-white text-agenda-dark px-8 py-3 font-montserrat text-sm tracking-widest hover:bg-opacity-90 transition-all duration-300 animate-fade-in"

@@ -25,7 +25,7 @@ const NewsletterSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-playfair mb-4 tracking-wide uppercase text-gray-800">
-            JOIN OUR INNER CIRCLE
+            JOIN THE SISTERHOOD
           </h2>
           
           <p className="text-base mb-8 font-light max-w-2xl mx-auto leading-relaxed text-gray-600">

@@ -7,68 +7,69 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="py-14 px-4 md:px-8 lg:px-16 bg-agenda-light">
-      <div className="container mx-auto flex flex-col relative">
+    <nav className="py-6 px-4 md:px-8 lg:px-16 bg-agenda-light">
+      <div className="container mx-auto relative">
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-between items-center">
-          {/* Left nav links */}
-          <div className="flex space-x-6">
-            <Link to="/" className="font-montserrat text-[16px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
-              HOME
+          {/* Left side - Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="text-left block">
+              <h1 className="font-playfair text-lg md:text-xl italic">Brunch with MAMI</h1>
+              <p className="text-[10px] font-montserrat tracking-wider">For women to achieve success on their own terms</p>
             </Link>
-            <Link to="/about" className="font-montserrat text-[16px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
-              ABOUT
-            </Link>
-            <Link to="/blog" className="font-montserrat text-[16px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
-              BLOG
-            </Link>
-            
           </div>
           
-          {/* Right nav links */}
-          <div className="flex space-x-6">
-          <Link to="/events" className="font-montserrat text-[16px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
+          {/* Right side - All navigation links */}
+          <div className="flex space-x-8">
+            <Link to="/" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
+              HOME
+            </Link>
+            <Link to="/about" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
+              ABOUT
+            </Link>
+            <Link to="/blog" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
+              BLOG
+            </Link>
+            <Link to="/events" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
               EVENTS & COURSES
             </Link>
-            <Link to="/shop" className="font-montserrat text-[16px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
+            <Link to="/shop" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
               SHOP
             </Link>
           </div>
         </div>
         
-        {/* Center Logo - Both desktop and mobile */}
-        <div className="absolute left-0 right-0 mx-auto w-max bottom-[-13px] flex justify-center">
-          <Link to="/" className="text-center block">
-            <h1 className="font-playfair text-xl md:text-2xl italic">brunch with mami</h1>
-            <p className="text-xs font-montserrat tracking-wider">finding clarity and courage together</p>
-          </Link>
-        </div>
-        
-        {/* Mobile Menu Button */}
+        {/* Mobile Navigation */}
         <div className="md:hidden flex justify-between items-center">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="z-20">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {/* Mobile Logo */}
+          <Link to="/" className="text-left block">
+            <h1 className="font-playfair text-base italic">Brunch with MAMI</h1>
+            <p className="text-[9px] font-montserrat tracking-wider">For women to achieve success on their own terms</p>
+          </Link>
+          
+          {/* Mobile Menu Button */}
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="z-50 ml-4">
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
-          <div className="w-6"></div> {/* Empty space to balance the button */}
         </div>
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 px-4 bg-agenda-light absolute top-12 left-0 right-0 z-10">
-            <div className="flex flex-col space-y-4 pt-10">
-              <Link to="/" className="font-montserrat text-sm font-bold tracking-widest">
+          <div className="md:hidden py-4 px-4 bg-agenda-light absolute top-16 left-0 right-0 z-40 shadow-lg border-t border-gray-200">
+            <div className="flex flex-col space-y-4 pt-2">
+              <Link to="/" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 HOME
               </Link>
-              <Link to="/about" className="font-montserrat text-sm font-bold tracking-widest">
+              <Link to="/about" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 ABOUT
               </Link>
-              <Link to="/blog" className="font-montserrat text-sm font-bold tracking-widest">
+              <Link to="/blog" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 BLOG
               </Link>
-              <Link to="/events" className="font-montserrat text-sm font-bold tracking-widest">
+              <Link to="/events" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 EVENTS & COURSES
               </Link>
-              <Link to="/shop" className="font-montserrat text-sm font-bold tracking-widest">
+              <Link to="/shop" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 SHOP
               </Link>
             </div>
