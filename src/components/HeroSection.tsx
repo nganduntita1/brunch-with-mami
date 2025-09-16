@@ -11,6 +11,7 @@ const HeroSection = () => {
           src={hero}
           alt="Hero background"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
         {/* Dark overlay/filter for the entire background */}
         <div className="absolute inset-0 "></div>

@@ -7,8 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
+// import Blog from "./pages/Blog";
+// import BlogPost from "./pages/BlogPost";
 import Shop from "./pages/Shop";
 import ShopAdmin from "./pages/ShopAdmin";
 import Events from "./pages/Events";
@@ -29,9 +29,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/admin" element={<Blog />} />
-              <Route path="/blog/:id" element={<BlogPost />} />
+              {/* Blog temporarily disabled */}
+              {/* <Route path="/blog" element={<Blog />} /> */}
+              {/* <Route path="/blog/admin" element={<Blog />} /> */}
+              {/* <Route path="/blog/:id" element={<BlogPost />} /> */}
               <Route path="/events" element={<Events />} />
               <Route path="/membership" element={<Membership />} />
               <Route path="/shop" element={<Shop />} />

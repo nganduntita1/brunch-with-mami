@@ -57,6 +57,7 @@ const About = () => {
           src={img3} 
           alt="Brunch with MAMI event" 
           className="w-full h-full object-cover brightness-75"
+          loading="lazy"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl italic text-center mb-4">
@@ -100,6 +101,7 @@ const About = () => {
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
               />
             </div>
           ))}
@@ -192,6 +194,7 @@ const About = () => {
               src={img1} 
               alt="Mamahlape - MAMI" 
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>

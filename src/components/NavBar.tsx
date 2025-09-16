@@ -27,9 +27,9 @@ const NavBar = () => {
             <Link to="/about" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
               ABOUT
             </Link>
-            <Link to="/blog" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
+            {/* <Link to="/blog" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
               BLOG
-            </Link>
+            </Link> */}
             <Link to="/events" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
               EVENTS & COURSES
             </Link>
@@ -66,9 +66,9 @@ const NavBar = () => {
               <Link to="/about" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 ABOUT
               </Link>
-              <Link to="/blog" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
+              {/* <Link to="/blog" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 BLOG
-              </Link>
+              </Link> */}
               <Link to="/events" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 EVENTS & COURSES
               </Link>

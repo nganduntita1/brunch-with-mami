@@ -86,6 +86,7 @@ const Events: FC = () => {
                 src={eventImage} 
                 alt="Upcoming Event"
                 className="max-w-full max-h-[80vh] object-contain"
+                loading="lazy"
               />
             </div>
           </section>
@@ -102,6 +103,7 @@ const Events: FC = () => {
                       src={course.image} 
                       alt={course.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   

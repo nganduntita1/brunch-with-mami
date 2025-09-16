@@ -113,6 +113,7 @@ const ArticleCard = ({ article }: { article: Article }) => {
             src={article.image} 
             alt={article.title}
             className="object-cover w-full h-full"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6">
             <div className="text-white">
@@ -142,6 +143,7 @@ const ProfileCard = ({ profile }: { profile: any }) => {
         src={profile.image} 
         alt={profile.name} 
         className="w-full h-auto"
+        loading="lazy"
       />
       <div className="absolute top-5 left-5">
         <p className="text-xs font-medium">{profile.name}</p>

@@ -129,6 +129,7 @@ export default function BlogPostForm({
                 src={formData.image_url} 
                 alt="Preview" 
                 className="mt-2 h-40 object-cover rounded-md"
+                loading="lazy"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://placehold.co/600x400?text=Invalid+Image+URL";
                 }}
