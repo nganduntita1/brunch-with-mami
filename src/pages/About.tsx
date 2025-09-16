@@ -60,7 +60,7 @@ const About = () => {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl italic text-center mb-4">
-            A CURATED SPACE FOR MODERN WORKING WOMEN
+            A LIFESTYLE AND NETWORKING HAVEN FOR DYNAMIC WOMEN
           </h1>
         </div>
       </div>
@@ -85,8 +85,8 @@ const About = () => {
       {/* Mission Statement Section */}
       <div className="w-full bg-agenda-pink py-12 px-4 md:px-8 mb-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-playfair text-xl md:text-2xl uppercase font-bold mb-6">
-            "OUR MISSION IS TO HELP YOU FIND HARMONY BETWEEN YOUR WORK AND WELLNESS THROUGH CONTENT AND PROGRAMMING THAT GIVES YOU THE CONFIDENCE TO OWN YOUR FUTURE"
+          <h2 className="font-playfair text-xl md:text-2xl font-bold mb-6">
+            "Brunch with MAMI is committed to creating a supportive and inclusive space for women to connect, inspire and empower one another. Through the Brunch, women can aspire to achieve success on their own terms. We aim to foster personal and professional growth, build lasting connections, and champion the advancement of women in all spheres of life."
           </h2>
         </div>
       </div>

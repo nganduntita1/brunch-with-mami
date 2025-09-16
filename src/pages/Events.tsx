@@ -65,12 +65,9 @@ const Events: FC = () => {
     {
       id: 1,
       title: "Cake and Finance: 6-Month Program",
-      startDate: "Starts July 10, 2025",
-      schedule: "Weekly sessions - Tuesdays 6:00 PM - 7:30 PM",
       format: "Virtual Course",
       description: "A comprehensive 6-month program covering personal finance essentials from budgeting to investing, specifically designed for women.",
       topics: ["Creating a personalized budget", "Debt management strategies", "Building an emergency fund", "Introduction to investing", "Retirement planning", "Estate planning basics"],
-      price: "M450",
       image: img1
     }
   ];
@@ -111,25 +108,10 @@ const Events: FC = () => {
                   <div className="p-6 md:w-2/3">
                     <h3 className="font-playfair text-2xl mb-3">{course.title}</h3>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                      <div>
-                        <p className="text-sm font-bold mb-1">Start Date:</p>
-                        <p className="text-sm">{course.startDate}</p>
-                      </div>
-                      
-                      <div>
-                        <p className="text-sm font-bold mb-1">Schedule:</p>
-                        <p className="text-sm">{course.schedule}</p>
-                      </div>
-                      
+                    <div className="mb-4">
                       <div>
                         <p className="text-sm font-bold mb-1">Format:</p>
                         <p className="text-sm">{course.format}</p>
-                      </div>
-                      
-                      <div>
-                        <p className="text-sm font-bold mb-1">Course Fee:</p>
-                        <p className="text-sm">{course.price}</p>
                       </div>
                     </div>
                     

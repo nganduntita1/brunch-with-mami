@@ -33,6 +33,9 @@ const NavBar = () => {
             <Link to="/events" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
               EVENTS & COURSES
             </Link>
+            <Link to="/membership" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
+              MEMBERSHIP
+            </Link>
             <Link to="/shop" className="font-montserrat text-[14px] font-bold tracking-widest hover:text-[#9d8474] transition-colors duration-300">
               SHOP
             </Link>
@@ -68,6 +71,9 @@ const NavBar = () => {
               </Link>
               <Link to="/events" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 EVENTS & COURSES
+              </Link>
+              <Link to="/membership" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
+                MEMBERSHIP
               </Link>
               <Link to="/shop" className="font-montserrat text-sm font-bold tracking-widest hover:text-[#9d8474] transition-colors py-2 block">
                 SHOP

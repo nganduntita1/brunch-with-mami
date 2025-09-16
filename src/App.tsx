@@ -13,6 +13,7 @@ import Shop from "./pages/Shop";
 import ShopAdmin from "./pages/ShopAdmin";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
+import Membership from "./pages/Membership";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ function App() {
               <Route path="/blog/admin" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/events" element={<Events />} />
+              <Route path="/membership" element={<Membership />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/shop/admin" element={<ShopAdmin />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
