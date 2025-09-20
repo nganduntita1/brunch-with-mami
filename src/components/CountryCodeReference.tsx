@@ -8,7 +8,7 @@ const CountryCodeReference = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const countryCodes = [
-    { country: "South Africa", code: "+27" },
+    { country: "South Africa", code: "+" },
     { country: "Lesotho", code: "+266" },
     { country: "Eswatini", code: "+268" },
     { country: "Namibia", code: "+264" },

@@ -98,7 +98,7 @@ const NewsletterSection = () => {
                     name="countryCode"
                     className="bg-white border border-gray-200 h-11 rounded-lg text-gray-800 placeholder-gray-400 text-base px-4 w-24 text-center" 
                     type="tel" 
-                    placeholder="+27"
+                    placeholder="+"
                     maxLength={5}
                   />
                   <Input 
@@ -111,7 +111,7 @@ const NewsletterSection = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="text-xs text-gray-500">
-                    Enter your country code (e.g., +27 for South Africa, +1 for US/Canada, +44 for UK)
+                    Enter your country code (e.g., + for South Africa, +1 for US/Canada, +44 for UK)
                   </p>
                   <CountryCodeReference />
                 </div>
