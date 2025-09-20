@@ -1,9 +1,12 @@
 
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 
 const Summit = () => {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  
   const speakers = [
     { id: 1, name: "Sarah Johnson", role: "CEO, Future Forward" },
     { id: 2, name: "Michelle Zhang", role: "Bestselling Author" },
@@ -28,7 +31,10 @@ const Summit = () => {
               <p className="text-lg font-medium">October 18-20, 2024</p>
               <p className="text-lg">New York City & Virtual</p>
             </div>
-            <button className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors">
+            <button 
+              onClick={() => setIsContactFormOpen(true)}
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
+            >
               Reserve Your Spot
             </button>
           </div>
@@ -78,13 +84,22 @@ const Summit = () => {
             <p className="mb-8 max-w-2xl mx-auto">
               Early bird tickets are available until June 30. Don't miss this opportunity to be part of a transformative experience.
             </p>
-            <button className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors">
+            <button 
+              onClick={() => setIsContactFormOpen(true)}
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
+            >
               Get Your Ticket
             </button>
           </div>
         </section>
       </main>
       <Footer />
+      <ContactForm 
+        open={isContactFormOpen}
+        onOpenChange={setIsContactFormOpen}
+        title="Reserve Your Summit Spot"
+        description="Get your ticket for the Agenda Women Summit 2024. Fill out the form below and we'll get back to you with ticket details."
+      />
     </div>
   );
 };
