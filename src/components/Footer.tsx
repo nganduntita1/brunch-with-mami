@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
+        {/* <div className="text-center mb-8">
           <p className="uppercase text-xs tracking-widest mb-4"></p>
           
           <div className="flex justify-center space-x-6">
@@ -31,7 +31,7 @@ const Footer = () => {
               <span className="sr-only">Youtube</span>
             </a>
           </div>
-        </div>
+        </div> */}
         
         <div className="border-t border-gray-200 pt-6">
           <div className="text-center text-xs text-gray-500">
