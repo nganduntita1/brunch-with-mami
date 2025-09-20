@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm, ValidationError } from '@formspree/react';
+import CountryCodeReference from './CountryCodeReference';
 
 const NewsletterSection = () => {
   const [state, handleSubmit] = useForm("xzbokyja");
@@ -92,92 +93,14 @@ const NewsletterSection = () => {
                   Phone Number
                 </label>
                 <div className="flex gap-2">
-                  <select
+                  <Input 
+                    id="countryCode" 
                     name="countryCode"
-                    className="bg-white border border-gray-200 h-11 rounded-lg text-gray-800 text-base px-3 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-[#9b87f5] focus:border-transparent"
-                  >
-                    <option value="+27">🇿🇦 South Africa (+27)</option>
-                    <option value="+266">🇱🇸 Lesotho (+266)</option>
-                    <option value="+268">🇸🇿 Eswatini (+268)</option>
-                    <option value="+264">🇳🇦 Namibia (+264)</option>
-                    <option value="+267">🇧🇼 Botswana (+267)</option>
-                    <option value="+263">🇿🇼 Zimbabwe (+263)</option>
-                    <option value="+258">🇲🇿 Mozambique (+258)</option>
-                    <option value="+260">🇿🇲 Zambia (+260)</option>
-                    <option value="+265">🇲🇼 Malawi (+265)</option>
-                    <option value="+250">🇷🇼 Rwanda (+250)</option>
-                    <option value="+256">🇺🇬 Uganda (+256)</option>
-                    <option value="+254">🇰🇪 Kenya (+254)</option>
-                    <option value="+255">🇹🇿 Tanzania (+255)</option>
-                    <option value="+251">🇪🇹 Ethiopia (+251)</option>
-                    <option value="+234">🇳🇬 Nigeria (+234)</option>
-                    <option value="+233">🇬🇭 Ghana (+233)</option>
-                    <option value="+225">🇨🇮 Côte d'Ivoire (+225)</option>
-                    <option value="+221">🇸🇳 Senegal (+221)</option>
-                    <option value="+212">🇲🇦 Morocco (+212)</option>
-                    <option value="+213">🇩🇿 Algeria (+213)</option>
-                    <option value="+216">🇹🇳 Tunisia (+216)</option>
-                    <option value="+218">🇱🇾 Libya (+218)</option>
-                    <option value="+20">🇪🇬 Egypt (+20)</option>
-                    <option value="+27">🇿🇦 South Africa (+27)</option>
-                    <option value="+1">🇺🇸 United States (+1)</option>
-                    <option value="+1">🇨🇦 Canada (+1)</option>
-                    <option value="+44">🇬🇧 United Kingdom (+44)</option>
-                    <option value="+33">🇫🇷 France (+33)</option>
-                    <option value="+49">🇩🇪 Germany (+49)</option>
-                    <option value="+39">🇮🇹 Italy (+39)</option>
-                    <option value="+34">🇪🇸 Spain (+34)</option>
-                    <option value="+31">🇳🇱 Netherlands (+31)</option>
-                    <option value="+32">🇧🇪 Belgium (+32)</option>
-                    <option value="+41">🇨🇭 Switzerland (+41)</option>
-                    <option value="+43">🇦🇹 Austria (+43)</option>
-                    <option value="+45">🇩🇰 Denmark (+45)</option>
-                    <option value="+46">🇸🇪 Sweden (+46)</option>
-                    <option value="+47">🇳🇴 Norway (+47)</option>
-                    <option value="+358">🇫🇮 Finland (+358)</option>
-                    <option value="+61">🇦🇺 Australia (+61)</option>
-                    <option value="+64">🇳🇿 New Zealand (+64)</option>
-                    <option value="+91">🇮🇳 India (+91)</option>
-                    <option value="+86">🇨🇳 China (+86)</option>
-                    <option value="+81">🇯🇵 Japan (+81)</option>
-                    <option value="+82">🇰🇷 South Korea (+82)</option>
-                    <option value="+65">🇸🇬 Singapore (+65)</option>
-                    <option value="+60">🇲🇾 Malaysia (+60)</option>
-                    <option value="+66">🇹🇭 Thailand (+66)</option>
-                    <option value="+63">🇵🇭 Philippines (+63)</option>
-                    <option value="+62">🇮🇩 Indonesia (+62)</option>
-                    <option value="+84">🇻🇳 Vietnam (+84)</option>
-                    <option value="+55">🇧🇷 Brazil (+55)</option>
-                    <option value="+54">🇦🇷 Argentina (+54)</option>
-                    <option value="+56">🇨🇱 Chile (+56)</option>
-                    <option value="+57">🇨🇴 Colombia (+57)</option>
-                    <option value="+51">🇵🇪 Peru (+51)</option>
-                    <option value="+52">🇲🇽 Mexico (+52)</option>
-                    <option value="+1">🇺🇸 United States (+1)</option>
-                    <option value="+1">🇨🇦 Canada (+1)</option>
-                    <option value="+7">🇷🇺 Russia (+7)</option>
-                    <option value="+90">🇹🇷 Turkey (+90)</option>
-                    <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
-                    <option value="+971">🇦🇪 UAE (+971)</option>
-                    <option value="+974">🇶🇦 Qatar (+974)</option>
-                    <option value="+965">🇰🇼 Kuwait (+965)</option>
-                    <option value="+973">🇧🇭 Bahrain (+973)</option>
-                    <option value="+968">🇴🇲 Oman (+968)</option>
-                    <option value="+972">🇮🇱 Israel (+972)</option>
-                    <option value="+961">🇱🇧 Lebanon (+961)</option>
-                    <option value="+963">🇸🇾 Syria (+963)</option>
-                    <option value="+962">🇯🇴 Jordan (+962)</option>
-                    <option value="+964">🇮🇶 Iraq (+964)</option>
-                    <option value="+98">🇮🇷 Iran (+98)</option>
-                    <option value="+93">🇦🇫 Afghanistan (+93)</option>
-                    <option value="+92">🇵🇰 Pakistan (+92)</option>
-                    <option value="+880">🇧🇩 Bangladesh (+880)</option>
-                    <option value="+94">🇱🇰 Sri Lanka (+94)</option>
-                    <option value="+977">🇳🇵 Nepal (+977)</option>
-                    <option value="+975">🇧🇹 Bhutan (+975)</option>
-                    <option value="+960">🇲🇻 Maldives (+960)</option>
-                    <option value="+27">🇿🇦 South Africa (+27)</option>
-                  </select>
+                    className="bg-white border border-gray-200 h-11 rounded-lg text-gray-800 placeholder-gray-400 text-base px-4 w-24 text-center" 
+                    type="tel" 
+                    placeholder="+27"
+                    maxLength={5}
+                  />
                   <Input 
                     id="phone" 
                     name="phone"
@@ -186,12 +109,18 @@ const NewsletterSection = () => {
                     placeholder="XXX XXX XXXX"
                   />
                 </div>
+                <div className="flex items-center justify-between">
+                  <p className="text-xs text-gray-500">
+                    Enter your country code (e.g., +27 for South Africa, +1 for US/Canada, +44 for UK)
+                  </p>
+                  <CountryCodeReference />
+                </div>
                 <ValidationError 
                   prefix="Phone" 
                   field="phone"
                   errors={state.errors}
-                  />
-                </div>
+                />
+              </div>
                 
                 <div className="pt-4">
                   <Button 
