@@ -6,7 +6,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import CountryCodeReference from './CountryCodeReference';
 
 const NewsletterSection = () => {
-  const [state, handleSubmit] = useForm("xzbokyja");
+  const [state, handleSubmit] = useForm("mblanklk");
 
   if (state.succeeded) {
     return (
