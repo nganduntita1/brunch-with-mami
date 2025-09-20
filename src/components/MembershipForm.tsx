@@ -5,35 +5,34 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 
-type ContactFormProps = {
+type MembershipFormProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  title?: string;
-  description?: string;
 };
 
-export default function ContactForm({
+export default function MembershipForm({
   open,
-  onOpenChange,
-  title = "Get In Touch",
-  description = "We'd love to hear from you. Send us a message and we'll respond as soon as possible."
-}: ContactFormProps) {
+  onOpenChange
+}: MembershipFormProps) {
   const [state, handleSubmit] = useForm("xzbokyja");
 
   if (state.succeeded) {
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[500px]">
           <DialogHeader>
-            <DialogTitle>Thank You!</DialogTitle>
+            <DialogTitle>Welcome to the Sisterhood! 🌸</DialogTitle>
           </DialogHeader>
           <div className="py-4">
-            <p className="text-center text-gray-700">
-              Thanks for your message! We'll get back to you soon.
+            <p className="text-center text-gray-700 mb-4">
+              Thanks for joining! We're excited to have you as part of our community.
+            </p>
+            <p className="text-center text-gray-600 text-sm">
+              You'll receive a confirmation email shortly with your membership details and next steps.
             </p>
           </div>
           <DialogFooter>
-            <Button onClick={() => onOpenChange(false)}>
+            <Button onClick={() => onOpenChange(false)} className="w-full">
               Close
             </Button>
           </DialogFooter>
@@ -44,27 +43,45 @@ export default function ContactForm({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-          <p className="text-sm text-gray-600">{description}</p>
+          <DialogTitle>Join Brunch with MAMI Membership</DialogTitle>
+          <p className="text-sm text-gray-600">
+            Fill out the form below to join our exclusive membership community for R250/month.
+          </p>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 py-4">
-          <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              Name
-            </label>
-            <Input
-              id="name"
-              name="name"
-              required
-              className="w-full"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                First Name *
+              </label>
+              <Input
+                id="firstName"
+                name="firstName"
+                required
+                className="w-full"
+                placeholder="Enter your first name"
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                Last Name *
+              </label>
+              <Input
+                id="lastName"
+                name="lastName"
+                required
+                className="w-full"
+                placeholder="Enter your last name"
+              />
+            </div>
           </div>
           
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
+              Email Address *
             </label>
             <Input
               id="email"
@@ -72,6 +89,7 @@ export default function ContactForm({
               type="email"
               required
               className="w-full"
+              placeholder="your.email@example.com"
             />
             <ValidationError 
               prefix="Email" 
@@ -121,15 +139,31 @@ export default function ContactForm({
           </div>
           
           <div className="space-y-2">
+            <label htmlFor="membershipType" className="block text-sm font-medium text-gray-700">
+              Membership Type *
+            </label>
+            <select
+              id="membershipType"
+              name="membershipType"
+              required
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9b87f5] focus:border-transparent"
+            >
+              <option value="">Select membership type</option>
+              <option value="monthly">Monthly Membership - R250/month</option>
+              <option value="annual">Annual Membership - R2,500/year (Save R500!)</option>
+            </select>
+          </div>
+          
+          <div className="space-y-2">
             <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-              Message
+              Tell us about yourself (Optional)
             </label>
             <Textarea
               id="message"
               name="message"
-              required
-              rows={4}
+              rows={3}
               className="w-full"
+              placeholder="What are you hoping to gain from this membership? Any specific interests or goals?"
             />
             <ValidationError 
               prefix="Message" 
@@ -138,16 +172,33 @@ export default function ContactForm({
             />
           </div>
           
-          <DialogFooter>
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <p className="text-sm text-gray-600 mb-2">
+              <strong>What happens next?</strong>
+            </p>
+            <ul className="text-xs text-gray-600 space-y-1">
+              <li>• You'll receive a confirmation email within 24 hours</li>
+              <li>• We'll send you payment details for your chosen membership</li>
+              <li>• Once payment is confirmed, you'll get access to all member benefits</li>
+              <li>• Your first monthly care package will be shipped within 5-7 business days</li>
+            </ul>
+          </div>
+          
+          <DialogFooter className="flex-col sm:flex-row gap-2">
             <Button 
               type="button" 
               variant="outline" 
               onClick={() => onOpenChange(false)}
+              className="w-full sm:w-auto"
             >
               Cancel
             </Button>
-            <Button type="submit" disabled={state.submitting}>
-              {state.submitting ? "Sending..." : "Send Message"}
+            <Button 
+              type="submit" 
+              disabled={state.submitting}
+              className="w-full sm:w-auto bg-[#9b87f5] hover:bg-[#8b7ae5] text-white"
+            >
+              {state.submitting ? "Joining..." : "Join the Sisterhood"}
             </Button>
           </DialogFooter>
         </form>

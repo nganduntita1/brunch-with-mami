@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useForm, ValidationError } from '@formspree/react';
 
 const NewsletterSection = () => {
-  const [state, handleSubmit] = useForm("mblanklk");
+  const [state, handleSubmit] = useForm("xzbokyja");
 
   if (state.succeeded) {
     return (
@@ -83,6 +83,46 @@ const NewsletterSection = () => {
                 <ValidationError 
                   prefix="Email" 
                   field="email"
+                  errors={state.errors}
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                  Phone Number
+                </label>
+                <div className="flex gap-2">
+                  <select
+                    name="countryCode"
+                    className="bg-white border border-gray-200 h-11 rounded-lg text-gray-800 text-base px-3 min-w-[100px] focus:outline-none focus:ring-2 focus:ring-[#9b87f5] focus:border-transparent"
+                  >
+                    <option value="+27">🇿🇦 +27</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+33">🇫🇷 +33</option>
+                    <option value="+49">🇩🇪 +49</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+86">🇨🇳 +86</option>
+                    <option value="+81">🇯🇵 +81</option>
+                    <option value="+55">🇧🇷 +55</option>
+                    <option value="+234">🇳🇬 +234</option>
+                    <option value="+254">🇰🇪 +254</option>
+                    <option value="+233">🇬🇭 +233</option>
+                    <option value="+234">🇳🇬 +234</option>
+                    <option value="+27">🇿🇦 +27</option>
+                  </select>
+                  <Input 
+                    id="phone" 
+                    name="phone"
+                    className="bg-white border border-gray-200 h-11 rounded-lg text-gray-800 placeholder-gray-400 text-base px-4 flex-1" 
+                    type="tel" 
+                    placeholder="XXX XXX XXXX"
+                  />
+                </div>
+                <ValidationError 
+                  prefix="Phone" 
+                  field="phone"
                   errors={state.errors}
                 />
               </div>

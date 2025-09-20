@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import MembershipForm from "../components/MembershipForm";
 
 const Membership = () => {
+  const [isMembershipFormOpen, setIsMembershipFormOpen] = useState(false);
+  
   const benefits = [
     "🌸 Monthly yoga session – live with a professional instructor",
     "🌸 Monthly period care package delivered to you",
@@ -51,7 +54,10 @@ const Membership = () => {
                 </ul>
 
                 <div className="text-center">
-                  <Button className="bg-black text-white hover:bg-black/90 px-8 py-6 text-lg">
+                  <Button 
+                    onClick={() => setIsMembershipFormOpen(true)}
+                    className="bg-black text-white hover:bg-black/90 px-8 py-6 text-lg"
+                  >
                     Join Now
                   </Button>
                 </div>
@@ -74,6 +80,10 @@ const Membership = () => {
         </div>
       </main>
       <Footer />
+      <MembershipForm 
+        open={isMembershipFormOpen}
+        onOpenChange={setIsMembershipFormOpen}
+      />
     </div>
   );
 };
