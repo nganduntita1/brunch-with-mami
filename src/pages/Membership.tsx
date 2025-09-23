@@ -9,7 +9,7 @@ const Membership = () => {
   const [isMembershipFormOpen, setIsMembershipFormOpen] = useState(false);
   
   const benefits = [
-    "🌸 Monthly yoga session – live with a professional instructor",
+    "🌸 2 Pilates / yoga classes monthly - live with a professional instructor.",
     "🌸 Monthly period care package delivered to you",
     "🌸 10% discount on all Brunch with MAMI events and workshops",
     "🌸 Exclusive monthly newsletter with content just for members",
