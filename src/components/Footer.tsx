@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="text-center text-xs text-gray-500">
             <p>&copy; {new Date().getFullYear()} Brunch with MAMI. All rights reserved.</p>
             <div className="mt-2">
-              <p>Designed by <a href="https://finetech.tech" target='_blank' className="hover:text-black transition-colors">FineTech</a> | Created in 2025</p>
+              <p>Designed by <a href="https://finetech.tech" target='_blank' className="hover:text-black transition-colors">FineTech</a></p>
             </div>
           </div>
         </div>
